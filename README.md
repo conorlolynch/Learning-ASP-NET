@@ -79,3 +79,13 @@ public void ConfigureServices(IServiceCollection services)
 * Next before running any migrations connect to the database through Microsoft SQL Server Management Studio
 * Next go to the NuGet Package Console and type in ```add-migration AddBookToDb``` and this will create a script that can turn the Book model into a table
 * To actually create the table type into the Package Console ```update-database```
+
+## Pages and Retrieving Books from Database
+* Navigate to the pages folder and add a new folder called "BookList"
+* Inside this folder add a New Razor Page. Choose the empty razor page template and call it "index".
+* In this page we will be retreiving all the books from the DB and displaying them.
+* The DB can be accessed once it has been added to the application pipeline
+
+```C#
+pass
+```
