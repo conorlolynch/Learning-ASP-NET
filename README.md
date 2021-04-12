@@ -51,7 +51,9 @@ Then to set up a connection to the DB in appsettings.json
 
 ## Configuring Database 
 * Add a new C# Class called ApplicationDbContext inside Model folder 
-* This class should inherit from Dbcontext class
+* This class should inherit from DbContext class
+* Leave the constructor empty as dependency injection is happening through the inheritance 
+* Then we need to add the book model thats going to be added to the database. To add a model to a database inside the DbContext we need an entry 
 ```C#
 public class ApplicationDbContext : DbContext
     {
@@ -62,5 +64,15 @@ public class ApplicationDbContext : DbContext
         }
 
         public DbSet<Book> Book { get; set; }
+```
+
+* One of the last steps is to add the DbContext inside Startup.cs where we add DbContext to our startup pipeline
+```C#
+ // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));   // Here 
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+        }
 ```
 
