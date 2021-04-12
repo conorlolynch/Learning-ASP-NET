@@ -69,10 +69,10 @@ public class ApplicationDbContext : DbContext
 * One of the last steps is to add the DbContext inside Startup.cs where we add DbContext to our startup pipeline
 ```C#
 // This method gets called by the runtime. Use this method to add services to the container.
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))); 
-        services.AddRazorPages().AddRazorRuntimeCompilation();
-    }
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+    services.AddRazorPages().AddRazorRuntimeCompilation();
+}
 ```
 
