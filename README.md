@@ -16,6 +16,7 @@ Will need:
 * Click on tools on navigation bar
 * Click on NuGet Package Manager and Select Manage NuGet Packages for Solution
 * Move to the Browse Tab in Package Manager
+![alt text](images/image_pm.png)
 
 ### Recommended Packages:
 Razor.RuntimeCompilation allows you to see changes in front end code simultaneously 
