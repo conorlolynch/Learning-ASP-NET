@@ -17,7 +17,7 @@ Will need:
 * Click on NuGet Package Manager and Select Manage NuGet Packages for Solution
 * Move to the Browse Tab in Package Manager
 
-# Recommended Packages:
+### Recommended Packages:
 Razor.RuntimeCompilation allows you to see changes in front end code simultaneously 
 
 ## Issues with SSL Certificates
