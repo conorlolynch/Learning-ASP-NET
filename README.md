@@ -36,5 +36,15 @@ https://stackoverflow.com/questions/47413183/visual-studio-2017-gives-adding-the
 * Then in this folder create a C# Class called Book (this is going to be the name of a table in our database)
 
 ## Setting up the Database
-pass
+These are some of the packages that need to be installed to use SQL Server with ASP.NET
+* Microsoft.EntityFrameworkCore  (used to access database)
+* Microsoft.EntityFrameworkCore.SqlServer
+* Microsoft.EntityFrameworkCore.tools (used for migrations)
+
+Then to set up a connection to the DB in appsettings.json
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-0004HJQ; Database=BookList; Trusted_Connection=True; MultipleActiveResultSets=True"
+  },
+```
 
