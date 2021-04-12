@@ -29,3 +29,12 @@ Sometimes you will get errors with launching application:
 To fix this you need to remove certificates from local and import them into trusted.
 https://stackoverflow.com/questions/47413183/visual-studio-2017-gives-adding-the-certificate-to-the-trusted-root-certificate
 
+# Adding Databases in Razor
+## Adding Models
+* Click on project folder 
+* Add folder and call it Model
+* Then in this folder create a C# Class called Book (this is going to be the name of a table in our database)
+
+## Setting up the Database
+pass
+
