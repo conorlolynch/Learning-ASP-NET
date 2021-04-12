@@ -87,5 +87,24 @@ public void ConfigureServices(IServiceCollection services)
 * The DB can be accessed once it has been added to the application pipeline
 
 ```C#
-pass
+public class IndexModel : PageModel
+{
+    // We create a private variable to hold our injection of the database
+    private readonly ApplicationDbContext _db;
+
+    // We create a constructor to get db through dependency injection and store it in _db
+    public IndexModel(ApplicationDbContext db)
+    {
+        _db = db;
+    }
+
+    // Next we want to create an iterable of Book
+    public IEnumerable<Book> Books { get; set; }
+        
+    public async Task OnGet()
+    {
+        // Here we are retrieving entries from DB and storing them in the Books IEnumerable property
+        Books = await _db.Book.ToListAsync();
+    }
+ }
 ```
