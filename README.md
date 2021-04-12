@@ -67,6 +67,7 @@ public class ApplicationDbContext : DbContext
 ```
 
 * One of the last steps is to add the DbContext inside Startup.cs where we add DbContext to our startup pipeline
+
 ```C#
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
@@ -75,4 +76,6 @@ public void ConfigureServices(IServiceCollection services)
     services.AddRazorPages().AddRazorRuntimeCompilation();
 }
 ```
-
+* Next before running any migrations connect to the database through Microsoft SQL Server Management Studio
+* Next go to the NuGet Package Console and type in ```add-migration AddBookToDb``` and this will create a script that can turn the Book model into a table
+* To actually create the table type into the Package Console ```update-database```
