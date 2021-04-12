@@ -49,3 +49,18 @@ Then to set up a connection to the DB in appsettings.json
   },
 ```
 
+## Configuring Database 
+* Add a new C# Class called ApplicationDbContext inside Model folder 
+* This class should inherit from Dbcontext class
+```C#
+public class ApplicationDbContext : DbContext
+    {
+        // Type ctor and press tab twice to autocomplete constructor
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+            // This constructor is empty but required for dependency injection
+        }
+
+        public DbSet<Book> Book { get; set; }
+```
+
